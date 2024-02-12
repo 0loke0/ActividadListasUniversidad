@@ -6,14 +6,7 @@ namespace ActividadListasUniversidad
 {
     class Program
     {
-        public class DTOPersona {
-            public int codigo { get; set; }
-            public string nombre { get; set; }
-            public string telefono { get; set; }
-            public int edad { get; set; }
-
-
-        }
+        
         static void Main(string[] args)
         {
             List<int> listaNumerosEnteros = new List<int>() {7,5,3,6,2,9};
@@ -68,7 +61,9 @@ namespace ActividadListasUniversidad
             Console.WriteLine("Mostar el ultimo dato de la lista");
             Console.WriteLine(operacionesConListas.ObtenerUltimoDato(listaNumerosEnteros));
 
-
+            //2.1 Mostar el ultimo dato de la lista
+            Console.WriteLine("Mostrar la lista de los elementos (Personas)");
+            operacionesConListas.ImprimirListaPersonaPorConsola(personas);
         }
 
 

@@ -29,5 +29,17 @@ namespace ActividadListasUniversidad
         {
             return lista.LastOrDefault();
         }
+
+        public void ImprimirListaPersonaPorConsola(List<DTOPersona> personas)
+        {
+            foreach (var persona in personas)
+            { Console.WriteLine($"======={persona.codigo}=======");
+                Console.WriteLine($"Nombre: {persona.nombre}");
+                Console.WriteLine($"Telefono: {persona.telefono}");
+                Console.WriteLine($"Edad: {persona.edad}");
+                Console.WriteLine("====================");
+            }            
+        }
+
     }
 }
