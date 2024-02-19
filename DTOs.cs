@@ -11,6 +11,5 @@ namespace ActividadListasUniversidad
         public string telefono { get; set; }
         public int edad { get; set; }
 
-
     }
 }

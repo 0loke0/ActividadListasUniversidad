@@ -7,7 +7,7 @@ namespace ActividadListasUniversidad
 {
     public class OperacionesConListas
     {
-        public void ImprimirListaPorConsola(List<int> lista)
+        public void ImprimirListaPorConsola(IEnumerable<int> lista)
         {
             foreach (var numero in lista)
             {
@@ -16,21 +16,21 @@ namespace ActividadListasUniversidad
             Console.WriteLine("-");
         }
 
-        public int ObtenerCantidadNumerosPares(List<int> lista)
+        public int ObtenerCantidadNumerosPares(IEnumerable<int> lista)
         {
             return lista.Where(w => (w % 2) == 0).Count();
         }
 
-        public double ObtenerPromedio(List<int> lista) {           
+        public double ObtenerPromedio(IEnumerable<int> lista) {           
             return (double)lista.Sum() / (double)lista.Count();           
         }
 
-        public int ObtenerUltimoDato(List<int> lista)
+        public int ObtenerUltimoDato(IEnumerable<int> lista)
         {
             return lista.LastOrDefault();
         }
-
-        public void ImprimirListaPersonaPorConsola(List<DTOPersona> personas)
+        
+        public void ImprimirListaPersonaPorConsola(IEnumerable<DTOPersona> personas)
         {
             foreach (var persona in personas)
             { Console.WriteLine($"======={persona.codigo}=======");
@@ -39,6 +39,11 @@ namespace ActividadListasUniversidad
                 Console.WriteLine($"Edad: {persona.edad}");
                 Console.WriteLine("====================");
             }            
+        }
+
+        public int ObtenerConteoElementos(IEnumerable<DTOPersona> lista)
+        {
+            return lista.Count();
         }
 
     }
